@@ -1,0 +1,93 @@
+# project-specific stuff
+5-socket-programming/tests/test.db
+
+# cmake stuff
+*.cbp
+.cmake/
+build.ninja
+cmake-build-debug/
+cmake_install.cmake
+CMakeCache.txt
+CMakeFiles/
+CTestTestfile.cmake
+install_manifest.txt
+Makefile
+
+# compiled binaries
+convert
+numbers
+db-add
+db-lookup
+sample.db
+isort
+twecho
+db-lookup-server
+http-client
+http-server
+linked-list-test
+revecho
+
+# Prerequisites
+*.d
+
+# Sharness
+Testing/
+trash*
+test-results/
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+.DS_Store/
+
+# IDEs
+.vscode/
+
+# Artifacts
+build/
