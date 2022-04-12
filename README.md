@@ -30,7 +30,7 @@ A copy of [_The C Programming Language, 2nd Edition_][1] is required
 for this course, as is a copy of [_Unix Network Programming: The
 Sockets Networking Api, Volume 1, 3rd Edition_][2].
 
-Lecture notes can be found in each session's directory. The lectures
+Lecture notes can be found in each session's directory. The notes
 are a bit spartan, so you'll likely need to do some digging on your
 own to fill in the gaps of what's been communicated.
 
