@@ -1,4 +1,4 @@
-# Lecture 3: Structs
+# Week 3
 
 ## Key Concepts
 

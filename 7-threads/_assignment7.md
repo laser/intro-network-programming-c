@@ -1,4 +1,4 @@
-# Lab 7
+# Assignment 7
 
 ## Part 1
 
@@ -16,9 +16,9 @@ that of your original server.
    threads that it spawns. There must be some bound on the number
    of child processes that it forks - it is up to you to decide how
    to set that limit.
-2. Your program must handle SIGTERM by shutting down all of the
+2. Your program must handle SIGTERM by shutting down all the
    threads that it has forked.
 3. Your program must not interleave concurrent writes from different
-   processes to the database file. You may wish to use a mutex.
+   processes to the database file. You may wish to use mutexes.
 
 [1]: https://github.com/fortio/fortio

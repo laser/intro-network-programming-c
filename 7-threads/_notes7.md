@@ -1,4 +1,4 @@
-# Lecture 7: POSIX Threads
+# Week 7
 
 ## Key Concepts
 

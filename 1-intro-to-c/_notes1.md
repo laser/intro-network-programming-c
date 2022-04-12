@@ -1,4 +1,4 @@
-# Lecture 1: Intro
+# Week 1
 
 ## Key Concepts
 
@@ -7,6 +7,7 @@
 ## Reading
 
 1. (required) K&R Chapters 1-4
+2. (required) http://www.csc.villanova.edu/~mdamian/C/c-input-output.htm
 
 ## Lecture: Bytes and Encodings
 

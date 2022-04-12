@@ -1,4 +1,4 @@
-# Lecture 6: Forking, IPC, and Signals
+# Week 6
 
 ## Key Concepts
 

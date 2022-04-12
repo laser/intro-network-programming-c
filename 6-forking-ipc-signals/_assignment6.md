@@ -1,4 +1,4 @@
-# Lab 6
+# Assignment 6
 
 ## Part 1
 
@@ -16,9 +16,11 @@ your original server.
    processes that it forks. There must be some bound on the number
    of child processes that it forks - it is up to you to decide how
    to set that limit.
-2. Your program must handle SIGTERM by shutting down all of the
+2. Your program must handle SIGTERM by shutting down all the
    processes that it has forked.
 3. Your program must not interleave concurrent writes from different 
-   processes to the database file.
+   processes to the database file. The [flock(2)][2] tool will be
+   useful here.
 
 [1]: https://github.com/fortio/fortio
+[2]: https://linux.die.net/man/2/flock

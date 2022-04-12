@@ -1,3 +1,9 @@
-# Lecture 4
+# Week 4
 
-TODO
+## Key Concepts
+
+- file I/O
+
+## Reading
+
+- (required) https://www.cs.yale.edu/homes/aspnes/pinewiki/C(2f)InputOutput.html

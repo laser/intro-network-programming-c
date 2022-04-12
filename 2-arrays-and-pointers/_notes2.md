@@ -1,4 +1,4 @@
-# Lecture 2: Pointers
+# Week 2
 
 ## Key Concepts
 
