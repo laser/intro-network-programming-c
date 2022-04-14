@@ -38,7 +38,7 @@ ways depending on the needs of the program. For example: Some bytes
 might be represented as a base-64 string in order to send the bytes
 over a channel that only supports text, like HTTP.
 
-Assume for a moment that we have a sequence of three byte whose 
+Assume for a moment that we have a sequence of three bytes whose 
 base-2 ("binary") representation looks like this:
 
 ```c
@@ -72,7 +72,7 @@ the disc, exist independently from how we encode and interpret them.
 ### Creating Sequences of Bytes
 
 How does our terminal know what bytes to write to stdin when we type 
-stuff, or how to render the bytes in a file when we cat its contents 
+stuff, or how to render the bytes in a file when we `cat` its contents 
 to stdout?
 
 It all comes down to how you have your terminal configured! The 
@@ -98,8 +98,8 @@ $ xxd /tmp/utf8.txt
 
 The file contains following bytes: `e1 95 97`.
 
-Now, switch your terminal's character encoding to Intuit (Mac OS), 
-any copy-paste into the shell, change the target file from utf8.txt 
+Now, switch your terminal's character encoding to `Inuit (Mac OS)`
+and copy-paste into the shell, changing the target file from utf8.txt 
 to inuit.txt:
 
 ```shell
@@ -180,15 +180,15 @@ interpret them as a signed integer, we get -1.
 
 This _interpretation_ happens in our programs all the time (C,
 anyways). In the following example, we're telling the printf 
-function to treat the bytes stored in x as a signed integer, 
+function to treat the bytes stored in `qq` as a signed integer, 
 predictably producing the output "signed dec: -1." We then tell the 
 computer to interpret those bytes as an unsigned integer, which 
 yields the output "unsigned dec: 4294967295." The bytes themselves 
-(stored in x) haven't changed, but our interpretation of those bytes 
+(stored in `qq`) haven't changed, but our interpretation of those bytes 
 has.
 
 ```c
 int qq = -1;
-printf("xsigned dec:    %d\n", qq);
-printf("xunsigned dec:  %u\n", qq);
+printf("signed dec:    %d\n", qq);
+printf("unsigned dec:  %u\n", qq);
 ```
