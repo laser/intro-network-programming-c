@@ -42,6 +42,6 @@ world WORLD
 dude DUDE
 ```
 
-You might get some use out of the `strlen` and `upper` functions.
+You might get some use out of the `strlen` and `toupper` functions.
 Make sure to run the leak detector on your code before committing
 it.
