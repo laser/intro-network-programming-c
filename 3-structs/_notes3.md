@@ -84,7 +84,7 @@ void for_each(struct Element *list, void (*fn)(void *)) {
             return;
         }
 
-        ptr++;
+        ptr = ptr->next;
     }
 }
 
