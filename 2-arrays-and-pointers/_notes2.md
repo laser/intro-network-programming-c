@@ -69,13 +69,13 @@ addr(y2): dec=140701865343372, hex=0x7ff7b4b3f98c
 addr(y3): dec=140701865343340, hex=0x7ff7b4b3f96c
 ````
 
-Note that the stack addresses grow downwards. Given a runaway 
+Note that the stack addresses go downwards. Given a runaway 
 recursive function, the stack will grow and grow until eventually it 
 tries to allocate from a portion of the process's memory that 
 doesn't belong to the thread's stack, at which point the OS kernel 
 terminates the program with a segmentation fault error.
 
-You can use the vmmap program to get a view of the virtual memory 
+You can use the `vmmap` program to get a view of the virtual memory 
 used by your program. Using vmmap, we can get the address range of 
 our program's one and only stack, and we can confirm what we see in 
 vmmap by causing our program to repeatedly allocate from the stack 
@@ -131,14 +131,14 @@ managed by the programmer and are permitted to outlive a function
 call.
 
 The programmer leases memory from the heap explicitly using the 
-malloc or calloc functions (which allocate uninitialized memory and 
+`malloc` or `calloc` functions (which allocate uninitialized memory and 
 initialized memory, respectively) and relinquishes that memory using 
 the free function.
 
-In the following program, the print_heap function returns a pointer 
+In the following program, the `print_heap` function returns a pointer 
 (which is a stack-allocated value) to some memory (on the heap) to 
 the main function. Also note that the programmer needs to remember 
-to call the free function, as the C compiler has no way of knowing 
+to call the `free` function, as the C compiler has no way of knowing 
 when you'll be done with the memory you've allocated (although the 
 Rust compiler does).
 
