@@ -39,7 +39,7 @@ functions that are marked as "not yet implemented":
 ### Build and Test
 
 To build the assignment, simply run the `./build.sh` script. To run
-the tests, run the `./test.sh` script. To run the program, first run
+the tests, run the `./run-tests.sh` script. To run the program, first run
 the build script, then run `./cmake-build-debug/numbers`.
 
 ### Hints!
