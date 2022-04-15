@@ -17,15 +17,15 @@ function run-1-intro-to-c {
     dexec ${wdir} "cmake .. && make"
     dexec ${wdir} "cmake .. && make"
     dexec ${wdir} "valgrind --leak-check=yes ./numbers 10 3"
-    dexec ${wdir} "valgrind --leak-check=yes printf '%s\n' '-1' | ./convert"
-    dexec ${wdir} "valgrind --leak-check=yes printf '%s\n' '1' | ./convert"
-    dexec ${wdir} "valgrind --leak-check=yes printf '%s\n' '100' | ./convert"
+    dexec ${wdir} "printf '%s\n' '-1' | valgrind --leak-check=yes ./convert"
+    dexec ${wdir} "printf '%s\n' '1' | valgrind --leak-check=yes ./convert"
+    dexec ${wdir} "printf '%s\n' '100' | valgrind --leak-check=yes ./convert"
 }
 
 function run-2-arrays-and-pointers {
     wdir="/opt/stuff/2-arrays-and-pointers/cmake-build-debug"
     dexec ${wdir} "cmake .. && make"
-    dexec ${wdir} "valgrind --leak-check=yes printf '%s\n' '6' | ./isort"
+    dexec ${wdir} "printf '%s\n' '6' | valgrind --leak-check=yes ./isort"
     dexec ${wdir} "valgrind --leak-check=yes ./twecho hey dude bingo"
 }
 
