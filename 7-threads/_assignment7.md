@@ -5,7 +5,7 @@
 The threaded-db-server program that you wrote in the previous
 exercise distributes HTTP request handling across a variety of
 child processes. In this exercise, write a new version of the server
-called "threaded-db-server" which distributes its workload across
+called `threaded-db-server` which distributes its workload across
 a number of threads that you spawn. Experiment with [Fortio][1] to 
 compare total requests/second throughput of your new server with 
 that of your original server. 

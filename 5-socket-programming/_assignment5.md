@@ -23,18 +23,6 @@ You entered: HELLO
 
 ## Part 2
 
-The program which you wrote in Part 1 limits concurrency to 1; while
-the server waits for client input, no other clients can interact
-with the server.
-
-Write a new program called "concurrent-loud-echo" which uses the
-`fork` function to create a child process for each client up to a
-maximum of 10 active child processes. The server should keep track
-of the processes that it has forked and should make sure that they
-are not orphaned when the server exits.
-
-## Part 3
-
 In this part of the exercise, you're going to be writing a web
 application called "db-server" which makes your db-lookup and 
 db-add functionality accessible over HTTP. You're going to want to 

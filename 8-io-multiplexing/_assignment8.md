@@ -2,9 +2,9 @@
 
 ## Part 1
 
-Write one last implementation of your server using the `poll(2)`
-function described in the lecture notes. Compare its throughput
-with the other servers you've built.
+Write one last implementation of your server called 
+`multiplexed-db-server` using the `poll` function described in the 
+reading. Compare its throughput with the other servers you've built.
 
 ### Acceptance Criteria
 

@@ -39,6 +39,80 @@ def get_open_port():
     return port
 
 
+class BaseEchoTest(unittest.TestCase):
+
+    def execute_test(self, to_send, expect_to_receive):
+        port = get_open_port()
+
+        process = subprocess.Popen([self.binary_path, "{}".format(port)],
+                                   stdin=subprocess.PIPE,
+                                   stdout=subprocess.PIPE)
+
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+            wait_until(lambda: is_port_bound("127.0.0.1", port))
+
+            s.connect(("127.0.0.1", port))
+            received = s.recv(1024)
+            self.assertEqual(received, "Enter a string: ")
+
+            s.sendall("{}\n".format(to_send))
+            received = s.recv(1024)
+            s.close()
+
+            self.assertEqual(received, "You entered: {}\n".format(expect_to_receive))
+        finally:
+            process.kill()
+
+
+class TestConcurrentLoudEcho(BaseEchoTest):
+
+    def setUp(self):
+        self.binary_path = '{}/cmake-build-debug/concurrent-loud-echo'.format(os.getcwd())
+
+    def test_simple_case(self):
+        self.execute_test("erin", "ERIN")
+
+    def test_multi_word(self):
+        self.execute_test("hello moto", "HELLO MOTO")
+
+    def test_punctuation_and_contraction(self):
+        self.execute_test("I can't eat that!", "I CAN'T EAT THAT!")
+
+    def test_concurrent_clients(self):
+        port = get_open_port()
+
+        process = subprocess.Popen([self.binary_path, "{}".format(port)],
+                                   stdin=subprocess.PIPE,
+                                   stdout=subprocess.PIPE)
+
+        try:
+            wait_until(lambda: is_port_bound("127.0.0.1", port))
+
+            client_socket_a = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            client_socket_a.connect(("127.0.0.1", port))
+            received_a = client_socket_a.recv(1024)
+            self.assertEqual(received_a, "Enter a string: ")
+
+            client_socket_b = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            client_socket_b.connect(("127.0.0.1", port))
+            received_b = client_socket_b.recv(1024)
+            self.assertEqual(received_b, "Enter a string: ")
+
+            client_socket_a.sendall("{}\n".format("howdy"))
+            received_a = client_socket_a.recv(1024)
+            client_socket_a.close()
+            self.assertEqual(received_a, "You entered: {}\n".format("HOWDY"))
+
+            client_socket_b.sendall("{}\n".format("what it is?"))
+            received_b = client_socket_b.recv(1024)
+            client_socket_b.close()
+            self.assertEqual(received_b, "You entered: {}\n".format("WHAT IT IS?"))
+        finally:
+            process.kill()
+
+
 class TestForkingServer(unittest.TestCase):
 
     def setUp(self):
