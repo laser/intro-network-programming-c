@@ -64,19 +64,6 @@ printf("The average is: %f\n", f);
 
 ...to print a floating point number.
 
-The `scanf` function can be useful for reading characters from stdin
-and interpreting those characters as a number:
-
-```c
-float f;
-scanf("%f", &f); // blocks until user enters a number and hits enter
-printf("%f\n", f); // prints the user input
-
-int x;
-scanf("%d", &x); // %d is different than %f (run `man 3 scanf` in terminal)
-printf("%d\n", x);
-```
-
 ## Part 2
 
 Write a program called "convert" which reads a signed integer from
@@ -104,4 +91,19 @@ signed dec:    -1
 unsigned dec:  4294967295
 hex:           ffffffff
 binary:        1111 1111 1111 1111 1111 1111 1111 1111
+```
+
+### Hints!
+
+The `scanf` function can be useful for reading characters from stdin
+and interpreting those characters as a number:
+
+```c
+float f;
+scanf("%f", &f); // blocks until user enters a number and hits enter
+printf("%f\n", f); // prints the user input
+
+int x;
+scanf("%d", &x); // %d is different than %f (run `man 3 scanf` in terminal)
+printf("%d\n", x);
 ```
