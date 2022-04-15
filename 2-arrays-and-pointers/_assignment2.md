@@ -2,7 +2,7 @@
 
 ## Part 1
 
-Write a program that dynamically allocates an array of random 
+Write a program `isort` that dynamically allocates an array of random 
 integers using the `malloc` and `random` functions. The number of 
 integers should be read from the user using `scanf`. You can assume 
 that the user will input a positive integer, i.e. you don't need to 
@@ -29,7 +29,7 @@ descending: 1804289383, 1681692777, 846930886
 
 ## Part 2
 
-Write a program called "twecho" that takes a variable number of
+Write a program called `twecho` that takes a variable number of
 arguments and prints each argument twice: once as-provided and once
 in capital letters. 
 
@@ -42,6 +42,6 @@ world WORLD
 dude DUDE
 ```
 
-You might get some use out of the `strlen` and `upper` functions.
+You might get some use out of the `strlen` and `toupper` functions.
 Make sure to run the leak detector on your code before committing
 it.

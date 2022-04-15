@@ -39,7 +39,7 @@ functions that are marked as "not yet implemented":
 ### Build and Test
 
 To build the assignment, simply run the `./build.sh` script. To run
-the tests, run the `./test.sh` script. To run the program, first run
+the tests, run the `./run-tests.sh` script. To run the program, first run
 the build script, then run `./cmake-build-debug/numbers`.
 
 ### Hints!
@@ -64,19 +64,6 @@ printf("The average is: %f\n", f);
 
 ...to print a floating point number.
 
-The `scanf` function can be useful for reading characters from stdin
-and interpreting those characters as a number:
-
-```c
-float f;
-scanf("%f", &f); // blocks until user enters a number and hits enter
-printf("%f\n", f); // prints the user input
-
-int x;
-scanf("%d", &x); // %d is different than %f (run `man 3 scanf` in terminal)
-printf("%d\n", x);
-```
-
 ## Part 2
 
 Write a program called "convert" which reads a signed integer from
@@ -91,7 +78,7 @@ then interprets that variable's bytes in four different ways:
 Some example runs of the program:
 
 ```shell
-$ printf '%s' '-1' | ./cmake-build-debug/convert
+$ printf '%s' '1' | ./cmake-build-debug/convert
 signed dec:    1
 unsigned dec:  1
 hex:           1
@@ -104,4 +91,19 @@ signed dec:    -1
 unsigned dec:  4294967295
 hex:           ffffffff
 binary:        1111 1111 1111 1111 1111 1111 1111 1111
+```
+
+### Hints!
+
+The `scanf` function can be useful for reading characters from stdin
+and interpreting those characters as a number:
+
+```c
+float f;
+scanf("%f", &f); // blocks until user enters a number and hits enter
+printf("%f\n", f); // prints the user input
+
+int x;
+scanf("%d", &x); // %d is different than %f (run `man 3 scanf` in terminal)
+printf("%d\n", x);
 ```

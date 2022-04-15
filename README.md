@@ -42,7 +42,7 @@ own to fill in the gaps of what's been communicated.
 - 4: File I/O ([notes](4-input-and-output/_notes4.md), [assignment](4-input-and-output/_notes4.md))
 - 5: Socket Basics ([notes](5-socket-programming/_notes5.md), [assignment](5-socket-programming/_assignment5.md))
 - 6: Forking Processes and IPC ([notes](6-forking-ipc-signals/_notes6.md), [assignment](6-forking-ipc-signals/_assignment6.md))
-- 7: POSIX Threads ([notes](7-threads/_assignment7.md), [assignment](7-threads/_assignment7.md))
+- 7: POSIX Threads ([notes](7-threads/_notes7.md), [assignment](7-threads/_assignment7.md))
 - 8: I/O Multiplexing with Poll ([notes](8-io-multiplexing/_notes8.md), [assignment](8-io-multiplexing/_assignment8.md))
 
 ## Tools

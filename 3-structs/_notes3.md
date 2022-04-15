@@ -22,7 +22,7 @@ the cost of safety.
 Recall that in C, we use types to tell the program how it should 
 interpret the bytes that we give it. The types themselves don't 
 change the in-memory bytes; we can tell the program to interpret a 
-single `char` as an `int`, an `int` as a 32-byte buffer, and so 
+single `char` as an `int`, an `int` as a 32-bit buffer, and so 
 forth.
 
 C, being really old and lame, supports parametric polymorphism about 
@@ -62,7 +62,7 @@ say, accidentally mix heterogeneous types in your list:
 
 ```c
 int main (int argc, char **argv) {
-    int i, 0;
+    int j = 0;
     char c = 'x';
 
     struct Element tail = { &j, NULL };
@@ -84,7 +84,7 @@ void for_each(struct Element *list, void (*fn)(void *)) {
             return;
         }
 
-        ptr++;
+        ptr = ptr->next;
     }
 }
 
