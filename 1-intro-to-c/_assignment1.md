@@ -78,7 +78,7 @@ then interprets that variable's bytes in four different ways:
 Some example runs of the program:
 
 ```shell
-$ printf '%s' '-1' | ./cmake-build-debug/convert
+$ printf '%s' '1' | ./cmake-build-debug/convert
 signed dec:    1
 unsigned dec:  1
 hex:           1
